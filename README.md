@@ -12,7 +12,7 @@ Passionate about the convergence of classic Full-Stack development and AI engine
 
 ---
 
-## 🛠 Habilidades
+## 🛠 Skills
 
 ### Applied AI & Agents
 
@@ -22,7 +22,7 @@ Passionate about the convergence of classic Full-Stack development and AI engine
 ![Gemini](https://img.shields.io/badge/Gemini-8E75FF?style=for-the-badge&logo=google-gemini&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-1A1A1A?style=for-the-badge&logo=pinecone&logoColor=white)
 
-### Lenguajes
+### Languages
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -77,7 +77,7 @@ Passionate about the convergence of classic Full-Stack development and AI engine
 
 ---
 
-## 📫 Encuéntrame en:
+## 📫 Find Me At:
 
 [![LinkTree](https://img.shields.io/badge/Link_Site-rafael_emilio_guzman-39E09B?style=for-the-badge&logo=Linktree&logoColor=white&labelColor=101010)](https://regf12.github.io/rafael-emilio-guzman)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-regf12-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/regf12)
@@ -87,4 +87,4 @@ Passionate about the convergence of classic Full-Stack development and AI engine
 
 <br>
 
-[![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Apoya_mi_trabajo-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white&labelColor=101010)](https://www.buymeacoffee.com/regf12)
+[![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_my_work-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white&labelColor=101010)](https://www.buymeacoffee.com/regf12)
