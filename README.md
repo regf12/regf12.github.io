@@ -1,18 +1,26 @@
 # ![Profile Image](https://res.cloudinary.com/regf/image/upload/v1706219364/personal/image1.png) Hello, my name is Rafael Emilio Guzman 👋
 
-### Degree in Computer Science | Full-stack Web & Android Developer
+### Forward Deployment AI Engineer | Full-Stack Developer
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCdxI5ohbMIuZcZzDv1CrxMQ?style=social)](https://www.youtube.com/@rafael-emilio-guzman?sub_confirmation=1)
 ![GitHub Followers](https://img.shields.io/github/followers/regf12?style=social)
 ![GitHub Stars](https://img.shields.io/github/stars/regf12?style=social)
 
-Software developer with more than 6 years of experience in developing web and mobile applications. With experience in e-commerce, service management and other industries. Passionate about creating quality, usable products.
+Software Engineer and Applied AI Engineer with more than 8 years of experience developing web, mobile, and AI-integrated architectures. Specialist in building autonomous AI agents, RAG (Retrieval-Augmented Generation) workflows, and process automation utilizing LLMs.
 
-I am always looking for new opportunities to learn and grow; I love working on challenging projects. If you are looking for a talented and committed developer, do not hesitate to contact me.
+Passionate about the convergence of classic Full-Stack development and AI engineering. Architect of agile, production-ready cloud solutions (AWS/Docker/Vercel) focused on rapid delivery of technical value.
 
 ---
 
 ## 🛠 Habilidades
+
+### Applied AI & Agents
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3A?style=for-the-badge&logo=chainlink&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75FF?style=for-the-badge&logo=google-gemini&logoColor=white)
+![Pinecone](https://img.shields.io/badge/Pinecone-1A1A1A?style=for-the-badge&logo=pinecone&logoColor=white)
 
 ### Lenguajes
 
