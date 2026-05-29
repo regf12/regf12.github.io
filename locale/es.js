@@ -1,4 +1,5 @@
-{
+window.locale = window.locale || {};
+window.locale.es = {
   "locale": "es",
   "title": "es",
 
@@ -152,4 +153,4 @@
   "portfolio.playntrade.title": "PLAY N TRADE",
   "portfolio.playntrade.description": "Sitio web e-commerce de compra/venta de videojuegos con catálogo dinámico y pasarela de pago segura integrada.",
   "portfolio.playntrade.button": "Ver Proyecto"
-}
+};

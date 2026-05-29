@@ -1,7 +1,7 @@
 let lang = 'en';
 let locale = {
-  es: null,
-  en: null,
+  es: window.locale?.es || null,
+  en: window.locale?.en || null,
 };
 
 /* ------------------------------------------------------------------------ */
@@ -61,28 +61,59 @@ function actualizarTextos(json, elementos) {
 
 /* ------------------------------------------------------------------------ */
 
+function switchLang(newLang) {
+  lang = newLang;
+  try {
+    localStorage.setItem('selectedLanguage', lang);
+  } catch (e) {}
+
+  // Actualizar el valor de todos los selectores de idioma de la interfaz
+  $('.select-lang').val(lang);
+
+  let prefix = window.assetPrefix || '';
+  let docName = `Rafael Guzman Developer (${lang || 'en'}).pdf`;
+  $('#link-cv').attr('href', `${prefix}docs/${docName}`);
+  $('#link-cv').attr('download', docName);
+
+  if (locale[lang]) {
+    getLang();
+  } else if (window.locale && window.locale[lang]) {
+    locale[lang] = window.locale[lang];
+    getLang();
+  } else {
+    fetch(`${prefix}locale/${lang}.json`)
+      .then(response => response.json())
+      .then(data => {
+        locale[lang] = data;
+        getLang();
+      })
+      .catch(error => {
+        console.log('Locale not loaded:', error);
+        getLang();
+      });
+  }
+}
+
 $(document).ready(function () {
   try {
-    lang = navigator.language.split('-')[0];
-    if (!['es', 'en'].includes(lang)) {
-      lang = 'en';
+    let savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang && ['es', 'en'].includes(savedLang)) {
+      lang = savedLang;
+    } else {
+      lang = navigator.language.split('-')[0];
+      if (!['es', 'en'].includes(lang)) {
+        lang = 'en';
+      }
     }
   } catch (error) {
     lang = 'en';
   }
 
-  let docName = `Rafael Guzman Developer (${lang || 'en'}).pdf`;
-  $('#link-cv').attr('href', `docs/${docName}`);
-  $('#link-cv').attr('download', docName);
+  // Vincular evento al cambio de select de idioma
+  $('.select-lang').change(function () {
+    switchLang($(this).val());
+  });
 
-  fetch(`locale/${lang}.json`)
-    .then(response => response.json())
-    .then(data => {
-      locale[lang] = data;
-      getLang();
-    })
-    .catch(error => {
-      console.log('Locale not loaded:', error);
-      getLang();
-    });
+  // Carga inicial
+  switchLang(lang);
 });
