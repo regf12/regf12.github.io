@@ -1,0 +1,1026 @@
+{
+  "about": {
+    "first_name": "Rafael Emilio",
+    "last_name": "Guzman",
+    "titles": [
+      "Degree in computer science",
+      "Full-stack developer",
+      "Forward Deployment AI Engineer"
+    ],
+    "description": "Software developer with more than 8 years of experience in developing web and mobile applications. With experience in e-commerce, service management and other industries. Passionate about creating quality, usable products.\n\nI am always looking for new opportunities to learn and grow; I love working on challenging projects. If you are looking for a talented and committed developer, do not hesitate to contact me.",
+    "contacts": [
+      {
+        "title": "Email",
+        "link": "mailto:regf.12@gmail.com",
+        "icon": "fa-envelope"
+      },
+      {
+        "title": "WhatsApp",
+        "link": "https://api.whatsapp.com/send/?phone=584120878578",
+        "icon": "fa-whatsapp"
+      },
+      {
+        "title": "Telegram",
+        "link": "https://t.me/regf22",
+        "icon": "fa-telegram"
+      },
+      {
+        "title": "LinkedIn",
+        "link": "https://www.linkedin.com/in/regf12",
+        "icon": "fa-linkedin"
+      },
+      {
+        "title": "Workana",
+        "link": "https://www.workana.com/freelancer/0be0b6836eb7ace0f5545adc26229f65",
+        "icon": "fa-briefcase"
+      },
+      {
+        "title": "GitHub",
+        "link": "https://github.com/regf12",
+        "icon": "fa-github"
+      },
+      {
+        "title": "GitLab",
+        "link": "https://gitlab.com/regf12",
+        "icon": "fa-gitlab"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "title": "HTML5",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+    },
+    {
+      "title": "CSS3",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+    },
+    {
+      "title": "JavaScript",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    },
+    {
+      "title": "TypeScript",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+      "title": "PHP",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+    },
+    {
+      "title": "Python",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+    },
+    {
+      "title": "SQL",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+    },
+    {
+      "title": "Node.js",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+    },
+    {
+      "title": "REST API",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+    },
+    {
+      "title": "jQuery",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
+    },
+    {
+      "title": "Sass",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
+    },
+    {
+      "title": "Less",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/less/less-plain-wordmark.svg"
+    },
+    {
+      "title": "Bootstrap",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+    },
+    {
+      "title": "Bulma",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bulma/bulma-plain.svg"
+    },
+    {
+      "title": "Vuetify",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuetify/vuetify-original.svg"
+    },
+    {
+      "title": "Quasar",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/quasar/quasar-original.svg"
+    },
+    {
+      "title": "NPM",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+    },
+    {
+      "title": "React.js",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+      "title": "JSX",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+      "title": "React Native",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+    },
+    {
+      "title": "Expo",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg"
+    },
+    {
+      "title": "Angular.js",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg"
+    },
+    {
+      "title": "Redux",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
+    },
+    {
+      "title": "Vue.js",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+    },
+    {
+      "title": "Nuxt.js",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxt/nuxt-original.svg"
+    },
+    {
+      "title": "Material UI",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg"
+    },
+    {
+      "title": "Tailwind CSS",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+    },
+    {
+      "title": "Apache",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apache/apache-original.svg"
+    },
+    {
+      "title": "Babel",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/babel/babel-original.svg"
+    },
+    {
+      "title": "Dart",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg"
+    },
+    {
+      "title": "Express",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+    },
+    {
+      "title": "Flutter",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+    },
+    {
+      "title": "iOS",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
+    },
+    {
+      "title": "Android",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+    },
+    {
+      "title": "Socket.io",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg"
+    },
+    {
+      "title": "Gradle",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg"
+    },
+    {
+      "title": "Kotlin",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+    },
+    {
+      "title": "Laravel",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+    },
+    {
+      "title": "Markdown",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg"
+    },
+    {
+      "title": "MongoDB",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
+    },
+    {
+      "title": "MySQL",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+    },
+    {
+      "title": "PostgreSQL",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+    },
+    {
+      "title": "Redis",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+    },
+    {
+      "title": "Supabase",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
+    },
+    {
+      "title": "Next.js",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+    },
+    {
+      "title": "Nginx",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg"
+    },
+    {
+      "title": "Webpack",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg"
+    },
+    {
+      "title": "Composer",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/composer/composer-original.svg"
+    },
+    {
+      "title": "Vite",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vite/vite-original.svg"
+    },
+    {
+      "title": "AWS",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+    },
+    {
+      "title": "AI Agents",
+      "type": "PROGRAMMING LANGUAGES AND TOOLS",
+      "icon": "fa-cogs"
+    },
+    {
+      "title": "Git",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+    },
+    {
+      "title": "GitLab CI/CD",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg"
+    },
+    {
+      "title": "SSH",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ssh/ssh-original.svg"
+    },
+    {
+      "title": "Trello",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-plain.svg"
+    },
+    {
+      "title": "Jira",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+    },
+    {
+      "title": "Slack",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/slack/slack-original.svg"
+    },
+    {
+      "title": "Gimp",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg"
+    },
+    {
+      "title": "Inkscape",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-original.svg"
+    },
+    {
+      "title": "Illustrator",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg"
+    },
+    {
+      "title": "Adobe XD",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-plain.svg"
+    },
+    {
+      "title": "Photoshop",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-plain.svg"
+    },
+    {
+      "title": "CodePen",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codepen/codepen-original.svg"
+    },
+    {
+      "title": "Vim",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg"
+    },
+    {
+      "title": "Atom",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/atom/atom-original.svg"
+    },
+    {
+      "title": "VS Code",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+    },
+    {
+      "title": "Android Studio",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+    },
+    {
+      "title": "Xcode",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg"
+    },
+    {
+      "title": "Bash",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg"
+    },
+    {
+      "title": "PuTTY",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/putty/putty-original.svg"
+    },
+    {
+      "title": "Docker",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+    },
+    {
+      "title": "FileZilla",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/filezilla/filezilla-original.svg"
+    },
+    {
+      "title": "Unity",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg"
+    },
+    {
+      "title": "Make",
+      "type": "TOOLS",
+      "icon": "fa-cogs"
+    },
+    {
+      "title": "Activepieces",
+      "type": "TOOLS",
+      "icon": "fa-cogs"
+    },
+    {
+      "title": "Google AI Studio API",
+      "type": "TOOLS",
+      "icon": "fa-cogs"
+    },
+    {
+      "title": "Google Sheets",
+      "type": "TOOLS",
+      "icon": "fa-file-excel-o"
+    },
+    {
+      "title": "GDevelop",
+      "type": "TOOLS",
+      "icon": "fa-gamepad"
+    },
+    {
+      "title": "Cron",
+      "type": "TOOLS",
+      "icon": "fa-clock-o"
+    },
+    {
+      "title": "Netlify",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
+    },
+    {
+      "title": "Vercel",
+      "type": "TOOLS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg"
+    },
+    {
+      "title": "OpenAI API",
+      "type": "TOOLS",
+      "icon": "fa-cogs"
+    },
+    {
+      "title": "Teamwork",
+      "type": "SOFT SKILLS",
+      "icon": "fa-check"
+    },
+    {
+      "title": "Agile development and Scrum",
+      "type": "SOFT SKILLS",
+      "icon": "fa-check"
+    },
+    {
+      "title": "Good communication, responsibility and commitment",
+      "type": "SOFT SKILLS",
+      "icon": "fa-check"
+    },
+    {
+      "title": "Creative thinking and positivity",
+      "type": "SOFT SKILLS",
+      "icon": "fa-check"
+    },
+    {
+      "title": "Time management and adaptability",
+      "type": "SOFT SKILLS",
+      "icon": "fa-check"
+    },
+    {
+      "title": "Perseverance and patience",
+      "type": "SOFT SKILLS",
+      "icon": "fa-check"
+    }
+  ],
+  "awards": [
+    {
+      "id": "mobile",
+      "title": "MOBILE DEVELOPMENT",
+      "description": "Cross-platform apps published on stores for logistics and services (React Native / Flutter).",
+      "image": "../img/project-mobile.png",
+      "link": "https://play.google.com/store/apps/developer?id=Regf12",
+      "skills": [
+        "React Native",
+        "Expo",
+        "REST API",
+        "JavaScript",
+        "Flutter",
+        "iOS",
+        "Android",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "telegram",
+      "title": "Telegram Bot",
+      "description": "Telegram bot designed to manage and organize contacts received from my portfolio. Allows capturing and administering leads easily.",
+      "image": "../img/project-bot.png",
+      "link": "https://t.me/RegfBot",
+      "skills": [
+        "Make",
+        "Activepieces",
+        "Google AI Studio API",
+        "Google Sheets",
+        "REST API",
+        "Git"
+      ]
+    },
+    {
+      "id": "ironmaiden",
+      "title": "IRON MAIDEN (GAME)",
+      "description": "Thematic Iron Maiden web video game. Developed with modern technologies for a unique interactive experience.",
+      "image": "../img/project-game.png",
+      "link": "https://iron-maiden-p-c-game.netlify.app/",
+      "skills": [
+        "JavaScript",
+        "GDevelop",
+        "Inkscape",
+        "HTML5",
+        "CSS3",
+        "Git"
+      ]
+    },
+    {
+      "id": "megashopty",
+      "title": "MEGASHOPTY",
+      "description": "Frontend for e-commerce with product catalog and shopping cart. Optimized for conversions.",
+      "image": "../img/project-megashopty.png",
+      "link": "https://frontest.megashopty.com/",
+      "skills": [
+        "Vue.js",
+        "JavaScript",
+        "Quasar",
+        "HTML5",
+        "CSS3",
+        "Node.js",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "foodmash",
+      "title": "FOOD MASH",
+      "description": "Dashboard for managing orders and menus in restaurants. Data visualization and inventory control.",
+      "image": "../img/project-foodmash.png",
+      "link": "https://dashboard-food-mash.netlify.app/",
+      "skills": [
+        "Docker",
+        "Laravel",
+        "Bootstrap",
+        "REST API",
+        "PHP",
+        "MySQL",
+        "Composer",
+        "Git"
+      ]
+    },
+    {
+      "id": "growfit",
+      "title": "GROWFIT",
+      "description": "Landing page for fitness and wellness service. Attractive design with effective calls to action.",
+      "image": "../img/project-growfit.png",
+      "link": "https://growfit-landing.netlify.app/",
+      "skills": [
+        "React.js",
+        "JSX",
+        "CSS3",
+        "HTML5",
+        "JavaScript",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "playpen",
+      "title": "PLAYPEN",
+      "description": "Entertainment and games platform. Immersive experience for users of all ages.",
+      "image": "../img/project-playpen.png",
+      "link": "https://pensionplaypen.com/",
+      "skills": [
+        "Vue.js",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "playntrade",
+      "title": "PLAY N TRADE",
+      "description": "Website for buying and selling video games and consoles. Dynamic catalog and payment gateway.",
+      "image": "../img/project-playntrade.png",
+      "link": "https://pntpanama.com/",
+      "skills": [
+        "Vue.js",
+        "Quasar",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "NPM",
+        "Git"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "kelmia",
+      "role": "Forward Deployment AI Engineer | Front-end Developer",
+      "link": "https://www.kelmia.com/",
+      "bussiness": "Kelmia",
+      "description": [
+        "I work as a Front-end Developer using Vue.",
+        "Supported backend tasks and team workloads.",
+        "Developed an AI multi-agent orchestration MVP."
+      ],
+      "date_start": {
+        "month": "June",
+        "year": "2025"
+      },
+      "date_end": {
+        "month": "May",
+        "year": "2026"
+      },
+      "skills": [
+        "Vue.js",
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "REST API",
+        "SQL",
+        "PostgreSQL",
+        "AI Agents",
+        "GitLab CI/CD",
+        "Docker",
+        "Node.js",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "nearbycrm",
+      "role": "Full stack developer",
+      "link": "https://www.nearbycrm.com/",
+      "bussiness": "NEARBY CRM | RealEstate Software",
+      "description": [
+        "I developed modules using Angular and Laravel.",
+        "Optimized system queries and API robustness."
+      ],
+      "date_start": {
+        "month": "April",
+        "year": "2024"
+      },
+      "date_end": {
+        "month": "June",
+        "year": "2025"
+      },
+      "skills": [
+        "Angular.js",
+        "Laravel",
+        "REST API",
+        "SQL",
+        "PostgreSQL",
+        "Redis",
+        "TypeScript",
+        "PHP",
+        "Composer",
+        "Node.js",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "xiomex",
+      "role": "Full stack developer",
+      "link": "https://xiomex.com/",
+      "bussiness": "Xiomex",
+      "description": [
+        "I provided platform maintenance and database support.",
+        "Implemented real-time features using WebSockets and React."
+      ],
+      "date_start": null,
+      "date_end": null,
+      "freelance": true,
+      "skills": [
+        "Vue.js",
+        "Python",
+        "Node.js",
+        "REST API",
+        "SQL",
+        "PostgreSQL",
+        "Supabase",
+        "Cron",
+        "Socket.io",
+        "React.js",
+        "JavaScript",
+        "NPM",
+        "Git"
+      ]
+    },
+    {
+      "id": "acristo",
+      "role": "Full stack developer",
+      "link": "https://acristo.com/",
+      "bussiness": "Acristo Engine",
+      "description": [
+        "I developed budgeting platforms for US builders.",
+        "Implemented calculators, AI assistant, and analytic reports."
+      ],
+      "date_start": null,
+      "date_end": null,
+      "freelance": true,
+      "skills": [
+        "Vue.js",
+        "Laravel",
+        "REST API",
+        "SQL",
+        "PostgreSQL",
+        "JavaScript",
+        "AI Agents",
+        "PHP",
+        "Composer",
+        "Node.js",
+        "NPM",
+        "OpenAI API",
+        "Git"
+      ]
+    },
+    {
+      "id": "pherchu",
+      "role": "Full stack developer",
+      "link": "https://www.instagram.com/phercuservices/",
+      "bussiness": "Phercu",
+      "description": [
+        "I developed systems using React and Node.js.",
+        "Deployed and put into production on AWS, Vercel and Netlify servers."
+      ],
+      "date_start": {
+        "month": "June",
+        "year": "2023"
+      },
+      "date_end": {
+        "month": "January",
+        "year": "2024"
+      },
+      "skills": [
+        "React.js",
+        "Node.js",
+        "AWS",
+        "Netlify",
+        "Vercel",
+        "REST API",
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "HTML5",
+        "NPM",
+        "Express",
+        "Git"
+      ]
+    },
+    {
+      "id": "work2",
+      "role": "Front end | Mobile developer",
+      "link": "https://www.deepseadev.com/en/",
+      "bussiness": "Deep Sea Developments",
+      "description": [
+        "I developed software for web and mobile applications.",
+        "Used technologies like javascript, react.js, react-native, socket.io."
+      ],
+      "date_start": {
+        "month": "October",
+        "year": "2022"
+      },
+      "date_end": {
+        "month": "May",
+        "year": "2023"
+      },
+      "skills": [
+        "Vue.js",
+        "React.js",
+        "React Native",
+        "Expo",
+        "Node.js",
+        "Python",
+        "REST API",
+        "SQL",
+        "PostgreSQL",
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "Socket.io",
+        "iOS",
+        "Android",
+        "NPM",
+        "HTML5",
+        "Git"
+      ]
+    },
+    {
+      "id": "work3",
+      "role": "Front end developer",
+      "link": "https://sim.org.ve/",
+      "bussiness": "Sim Venezuela",
+      "description": [
+        "I developed and maintained web applications for the company and its clients.",
+        "I used programming technologies such as javascript, vue.js, react.js."
+      ],
+      "date_start": {
+        "month": "April",
+        "year": "2021"
+      },
+      "date_end": {
+        "month": "April",
+        "year": "2022"
+      },
+      "skills": [
+        "Vue.js",
+        "React.js",
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "HTML5",
+        "NPM",
+        "Node.js",
+        "Git"
+      ]
+    },
+    {
+      "id": "work4",
+      "role": "Full stack developer",
+      "link": "https://cesticom.com/",
+      "bussiness": "Cesticom",
+      "description": [
+        "I developed web applications for the company and its clients.",
+        "I used programming technologies such as javascript, react.js, php, laravel.",
+        "Work under scrum methodology"
+      ],
+      "date_start": null,
+      "date_end": null,
+      "freelance": true,
+      "skills": [
+        "Vue.js",
+        "React.js",
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "TypeScript",
+        "PHP",
+        "Laravel",
+        "REST API",
+        "SQL",
+        "PostgreSQL",
+        "Agile development and Scrum",
+        "GitLab CI/CD",
+        "Composer",
+        "HTML5",
+        "NPM",
+        "Node.js",
+        "Git"
+      ]
+    },
+    {
+      "id": "work5",
+      "role": "Full stack developer",
+      "link": "https://fullsites.com.ar/",
+      "bussiness": "Full Sites",
+      "description": [
+        "I designed a large number of e-commerce sites.",
+        "I was in charge of developing, supporting, managing and deploying e-commerce sites to production."
+      ],
+      "date_start": null,
+      "date_end": null,
+      "freelance": true,
+      "skills": [
+        "Vue.js",
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "REST API",
+        "SQL",
+        "MySQL",
+        "Photoshop",
+        "NPM",
+        "HTML5",
+        "Git"
+      ]
+    },
+    {
+      "id": "work6",
+      "role": "Full stack developer",
+      "link": "https://saeplus.com/",
+      "bussiness": "Saecosof",
+      "description": [
+        "Manage servers and repositories on company servers.",
+        "I provided support and developed modules for the company's commercial system.",
+        "I used programming technologies such as javascript, php, laravel, socket.io.",
+        "Implemented report generation, bulk import and analytic dashboards."
+      ],
+      "date_start": {
+        "month": "February",
+        "year": "2019"
+      },
+      "date_end": {
+        "month": "November",
+        "year": "2019"
+      },
+      "skills": [
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "REST API",
+        "SQL",
+        "MySQL",
+        "PHP",
+        "Laravel",
+        "Cron",
+        "Socket.io",
+        "Git",
+        "Nginx",
+        "Composer",
+        "Bash",
+        "HTML5",
+        "Node.js",
+        "NPM",
+        "SSH"
+      ]
+    },
+    {
+      "id": "work7",
+      "role": "Front end developer",
+      "link": null,
+      "bussiness": "Servicios Veca",
+      "description": [
+        "I developed and maintained web applications.",
+        "I used programming technologies such as javascript, vue.js."
+      ],
+      "date_start": {
+        "month": "November",
+        "year": "2016"
+      },
+      "date_end": {
+        "month": "December",
+        "year": "2018"
+      },
+      "skills": [
+        "JavaScript",
+        "CSS3",
+        "Bootstrap",
+        "Vue.js",
+        "HTML5",
+        "NPM",
+        "Node.js",
+        "Git"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "career1",
+      "title": "DEGREE IN COMPUTER SCIENCE",
+      "university": "Eastern University of Venezuela",
+      "career": "Computer Science",
+      "description": [
+        "Web development"
+      ],
+      "date_end": {
+        "month": "September",
+        "year": "2019"
+      }
+    },
+    {
+      "id": "career4",
+      "title": "A2 English for Developers",
+      "university": "Freecodecamp",
+      "career": "English",
+      "description": [],
+      "date_end": {
+        "month": "February",
+        "year": "2025"
+      }
+    },
+    {
+      "id": "career3",
+      "title": "SOFTWARE TESTING BASICS - QA",
+      "university": "Udemy",
+      "career": "Quality Assurance (QA)",
+      "description": [
+        "Certificate: https://www.udemy.com/certificate/UC-f2d02093-8e46-439d-8c8b-35d74650965a/"
+      ],
+      "date_end": {
+        "month": "August",
+        "year": "2023"
+      }
+    },
+    {
+      "id": "career2",
+      "title": "TUNING THE POSTGRESQL SERVER TO OPTIMIZE PERFORMANCE",
+      "university": "Udemy",
+      "career": "Database Performance",
+      "description": [
+        "Certificate: https://www.udemy.com/certificate/UC-b7b3c27c-dc6f-4a7a-83d9-38ec5e8a787e/"
+      ],
+      "date_end": {
+        "month": "July",
+        "year": "2023"
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-{
+window.resumeData = {
   "about": {
     "first_name": "Rafael Emilio",
     "last_name": "Guzman",
@@ -170,7 +170,7 @@
     {
       "title": "Nuxt.js",
       "type": "PROGRAMMING LANGUAGES AND TOOLS",
-      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg"
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxt/nuxt-original.svg"
     },
     {
       "title": "Material UI",
@@ -490,6 +490,7 @@
   ],
   "awards": [
     {
+      "id": "mobile",
       "title": "MOBILE DEVELOPMENT",
       "description": "Cross-platform apps published on stores for logistics and services (React Native / Flutter).",
       "image": "../img/project-mobile.png",
@@ -507,6 +508,7 @@
       ]
     },
     {
+      "id": "telegram",
       "title": "Telegram Bot",
       "description": "Telegram bot designed to manage and organize contacts received from my portfolio. Allows capturing and administering leads easily.",
       "image": "../img/project-bot.png",
@@ -521,6 +523,7 @@
       ]
     },
     {
+      "id": "ironmaiden",
       "title": "IRON MAIDEN (GAME)",
       "description": "Thematic Iron Maiden web video game. Developed with modern technologies for a unique interactive experience.",
       "image": "../img/project-game.png",
@@ -535,6 +538,7 @@
       ]
     },
     {
+      "id": "megashopty",
       "title": "MEGASHOPTY",
       "description": "Frontend for e-commerce with product catalog and shopping cart. Optimized for conversions.",
       "image": "../img/project-megashopty.png",
@@ -551,6 +555,7 @@
       ]
     },
     {
+      "id": "foodmash",
       "title": "FOOD MASH",
       "description": "Dashboard for managing orders and menus in restaurants. Data visualization and inventory control.",
       "image": "../img/project-foodmash.png",
@@ -567,6 +572,7 @@
       ]
     },
     {
+      "id": "growfit",
       "title": "GROWFIT",
       "description": "Landing page for fitness and wellness service. Attractive design with effective calls to action.",
       "image": "../img/project-growfit.png",
@@ -582,6 +588,7 @@
       ]
     },
     {
+      "id": "playpen",
       "title": "PLAYPEN",
       "description": "Entertainment and games platform. Immersive experience for users of all ages.",
       "image": "../img/project-playpen.png",
@@ -596,6 +603,7 @@
       ]
     },
     {
+      "id": "playntrade",
       "title": "PLAY N TRADE",
       "description": "Website for buying and selling video games and consoles. Dynamic catalog and payment gateway.",
       "image": "../img/project-playntrade.png",
@@ -613,6 +621,7 @@
   ],
   "experience": [
     {
+      "id": "kelmia",
       "role": "Forward Deployment AI Engineer | Front-end Developer",
       "link": "https://www.kelmia.com/",
       "bussiness": "Kelmia",
@@ -646,6 +655,7 @@
       ]
     },
     {
+      "id": "nearbycrm",
       "role": "Full stack developer",
       "link": "https://www.nearbycrm.com/",
       "bussiness": "NEARBY CRM | RealEstate Software",
@@ -677,6 +687,7 @@
       ]
     },
     {
+      "id": "xiomex",
       "role": "Full stack developer",
       "link": "https://xiomex.com/",
       "bussiness": "Xiomex",
@@ -704,6 +715,7 @@
       ]
     },
     {
+      "id": "acristo",
       "role": "Full stack developer",
       "link": "https://acristo.com/",
       "bussiness": "Acristo Engine",
@@ -731,6 +743,7 @@
       ]
     },
     {
+      "id": "pherchu",
       "role": "Full stack developer",
       "link": "https://www.instagram.com/phercuservices/",
       "bussiness": "Phercu",
@@ -763,6 +776,7 @@
       ]
     },
     {
+      "id": "work2",
       "role": "Front end | Mobile developer",
       "link": "https://www.deepseadev.com/en/",
       "bussiness": "Deep Sea Developments",
@@ -800,6 +814,7 @@
       ]
     },
     {
+      "id": "work3",
       "role": "Front end developer",
       "link": "https://sim.org.ve/",
       "bussiness": "Sim Venezuela",
@@ -828,6 +843,7 @@
       ]
     },
     {
+      "id": "work4",
       "role": "Full stack developer",
       "link": "https://cesticom.com/",
       "bussiness": "Cesticom",
@@ -861,6 +877,7 @@
       ]
     },
     {
+      "id": "work5",
       "role": "Full stack developer",
       "link": "https://fullsites.com.ar/",
       "bussiness": "Full Sites",
@@ -886,6 +903,7 @@
       ]
     },
     {
+      "id": "work6",
       "role": "Full stack developer",
       "link": "https://saeplus.com/",
       "bussiness": "Saecosof",
@@ -925,6 +943,7 @@
       ]
     },
     {
+      "id": "work7",
       "role": "Front end developer",
       "link": null,
       "bussiness": "Servicios Veca",
@@ -954,6 +973,7 @@
   ],
   "education": [
     {
+      "id": "career1",
       "title": "DEGREE IN COMPUTER SCIENCE",
       "university": "Eastern University of Venezuela",
       "career": "Computer Science",
@@ -966,6 +986,7 @@
       }
     },
     {
+      "id": "career4",
       "title": "A2 English for Developers",
       "university": "Freecodecamp",
       "career": "English",
@@ -976,6 +997,7 @@
       }
     },
     {
+      "id": "career3",
       "title": "SOFTWARE TESTING BASICS - QA",
       "university": "Udemy",
       "career": "Quality Assurance (QA)",
@@ -988,6 +1010,7 @@
       }
     },
     {
+      "id": "career2",
       "title": "TUNING THE POSTGRESQL SERVER TO OPTIMIZE PERFORMANCE",
       "university": "Udemy",
       "career": "Database Performance",
@@ -1000,4 +1023,4 @@
       }
     }
   ]
-}
+};
