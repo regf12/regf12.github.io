@@ -12,6 +12,10 @@
 - Se han establecido las reglas de usuario sobre el idioma español para todas las comunicaciones y registros.
 
 ### Tareas en Ejecución
-1. Creación e inicialización de `AGENTS.md` y `CHANGELOG.md`.
-2. Extracción de datos del HTML y reescritura de `data-resume.json`.
-3. Verificación de la estructura y formato.
+1. Verificación de la estructura y formato tras la migración al formato JSON unificado.
+
+### Tareas Completadas (Sesión Actual: 2026-06-05)
+- Inicialización de `AGENTS.md` y `CHANGELOG.md` en idioma español.
+- Extracción inicial del HTML a `data-resume.json` y `data-resume.js`.
+- Reemplazo de los iconos genéricos/grises (Make, Google AI Studio, Google Sheets, GDevelop, Cron, OpenAI) por versiones modernas, coloridas y consistentes.
+

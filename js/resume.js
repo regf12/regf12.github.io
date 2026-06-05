@@ -40,7 +40,7 @@ let locale = {
 function getLang() {
   try {
     let elementos = document.querySelectorAll('[data-key]');
-  
+
     actualizarTextos(locale[lang], elementos);
   } catch (error) {
     // 
@@ -65,7 +65,7 @@ function switchLang(newLang) {
   lang = newLang;
   try {
     localStorage.setItem('selectedLanguage', lang);
-  } catch (e) {}
+  } catch (e) { }
 
   // Actualizar el valor de todos los selectores de idioma de la interfaz
   $('.select-lang').val(lang);
@@ -157,7 +157,7 @@ function renderSkills(skills) {
     if (skill.type === 'PROGRAMMING LANGUAGES AND TOOLS') {
       const delayAttr = langDelay > 0 ? ` data-aos-delay="${langDelay}"` : '';
       languagesHtml += `
-        <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in"${delayAttr}>
+        <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item flex justify-content-end" data-aos="zoom-in"${delayAttr}>
           ${imgOrIcon}
           <div class="skill-name">${skill.title}</div>
         </li>
@@ -167,7 +167,7 @@ function renderSkills(skills) {
     } else if (skill.type === 'TOOLS') {
       const delayAttr = toolDelay > 0 ? ` data-aos-delay="${toolDelay}"` : '';
       toolsHtml += `
-        <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item" data-aos="zoom-in"${delayAttr}>
+        <li class="col-3 col-sm-2 col-md-2 col-lg-1 list-inline-item skill-item flex justify-content-end" data-aos="zoom-in"${delayAttr}>
           ${imgOrIcon}
           <div class="skill-name">${skill.title}</div>
         </li>
@@ -201,7 +201,7 @@ function renderPortfolio(awards) {
     if (delay > 600) delay = 100;
 
     // Generar badges de habilidades asociadas
-    const skillsBadges = project.skills ? project.skills.map(skill => 
+    const skillsBadges = project.skills ? project.skills.map(skill =>
       `<span class="badge badge-secondary mr-1 mb-1" style="font-size: 0.65rem; font-weight: 500; background-color: #eaecf0; color: #475467; border: 1px solid #d0d5dd;">${skill}</span>`
     ).join('') : '';
 
@@ -254,7 +254,7 @@ function renderExperience(experiences) {
     }).join('<br />');
 
     // Badges de habilidades asociadas
-    const skillsBadges = exp.skills ? exp.skills.map(skill => 
+    const skillsBadges = exp.skills ? exp.skills.map(skill =>
       `<span class="badge badge-light mr-1 mb-1" style="font-size: 0.7rem; font-weight: 500; border: 1px solid #e4e7ec; color: #344054;">${skill}</span>`
     ).join('') : '';
 
@@ -355,10 +355,10 @@ $(document).ready(function () {
   function initializeResume(data) {
     // 1. Renderizar dinámicamente todo el contenido
     renderResume(data);
-    
+
     // 2. Ejecutar traducción sobre el contenido inyectado
     switchLang(lang);
-    
+
     // 3. Inicializar animaciones AOS
     if (window.AOS) {
       window.AOS.init({

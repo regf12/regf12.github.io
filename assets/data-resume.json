@@ -415,32 +415,32 @@
     {
       "title": "Make",
       "type": "TOOLS",
-      "icon": "fa-cogs"
+      "icon": "https://unpkg.com/@lobehub/icons-static-svg@latest/icons/make.svg"
     },
     {
       "title": "Activepieces",
       "type": "TOOLS",
-      "icon": "fa-cogs"
+      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/activepieces.png"
     },
     {
       "title": "Google AI Studio API",
       "type": "TOOLS",
-      "icon": "fa-cogs"
+      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/google-gemini.png"
     },
     {
       "title": "Google Sheets",
       "type": "TOOLS",
-      "icon": "fa-file-excel-o"
+      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/google-sheets.png"
     },
     {
       "title": "GDevelop",
       "type": "TOOLS",
-      "icon": "fa-gamepad"
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/5/54/GDevelop_complete_logo_%28purple_background%29.svg"
     },
     {
       "title": "Cron",
       "type": "TOOLS",
-      "icon": "fa-clock-o"
+      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/cronicle.png"
     },
     {
       "title": "Netlify",
@@ -455,7 +455,7 @@
     {
       "title": "OpenAI API",
       "type": "TOOLS",
-      "icon": "fa-cogs"
+      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/openai.png"
     },
     {
       "title": "Teamwork",
