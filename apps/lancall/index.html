@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidad y Términos de Uso - LANcall</title>
+    <meta name="description"
+        content="Políticas de Privacidad y Términos y Condiciones de Uso de LANcall, la aplicación de intercomunicación de voz continua y manos libres para motociclistas.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #191D24;
+            --bg-secondary: #202632;
+            --color-primary: #2957A3;
+            --color-primary-light: #3b71ca;
+            --color-accent: #936BED;
+            --color-accent-light: #b091f4;
+            --text-primary: #F3F4F6;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
+            --border-color: #2D3748;
+            --card-bg: rgba(32, 38, 50, 0.7);
+            --glow-primary: rgba(41, 87, 163, 0.3);
+            --glow-accent: rgba(147, 107, 237, 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Barra de progreso de lectura */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        /* Estrellas o fondo sutil degradado */
+        .bg-gradient-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(41, 87, 163, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(147, 107, 237, 0.1) 0%, transparent 45%),
+                var(--bg-primary);
+        }
+
+        /* Contenedor principal */
+        header {
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(25, 29, 36, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border-bottom-color: rgba(41, 87, 163, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(147, 107, 237, 0.3);
+        }
+
+        .logo-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: white;
+            stroke-width: 2.5;
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #ffffff, var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text span {
+            color: var(--color-accent);
+            -webkit-text-fill-color: initial;
+            background: none;
+        }
+
+        /* Banner Hero */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 24px 40px 24px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--color-accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Control de Pestañas */
+        .tabs-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .tabs-container {
+            background-color: var(--bg-secondary);
+            padding: 6px;
+            border-radius: 50px;
+            display: flex;
+            border: 1px solid var(--border-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 30px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-primary);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: white;
+            box-shadow: 0 4px 15px rgba(41, 87, 163, 0.4);
+        }
+
+        /* Barra de búsqueda interactiva */
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            position: relative;
+            padding: 0 24px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            background-color: rgba(32, 38, 50, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 14px 20px 14px 45px;
+            border-radius: 30px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            outline: none;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(8px);
+        }
+
+        .search-input:focus {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 15px rgba(147, 107, 237, 0.2);
+            background-color: rgba(32, 38, 50, 0.9);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        .search-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        /* Contenedores de Contenido */
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            padding: 0 24px;
+            flex-grow: 1;
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tarjeta de Resumen Rápido */
+        .summary-card {
+            background: linear-gradient(135deg, rgba(41, 87, 163, 0.15), rgba(147, 107, 237, 0.05));
+            border: 1px solid rgba(147, 107, 237, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+        }
+
+        .summary-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary-card ul {
+            list-style-type: none;
+        }
+
+        .summary-card li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .summary-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        /* Estilos generales del texto legal */
+        .policy-block {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            transition: var(--transition-smooth);
+            backdrop-filter: blur(8px);
+        }
+
+        .policy-block:hover {
+            border-color: rgba(147, 107, 237, 0.25);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .policy-block h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 12px;
+        }
+
+        .policy-block h2 svg {
+            width: 22px;
+            height: 22px;
+            color: var(--color-accent);
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .policy-block p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+            text-align: justify;
+        }
+
+        .policy-block p strong {
+            color: var(--text-primary);
+        }
+
+        .policy-block ul,
+        .policy-block ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        .policy-block li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .policy-block li strong {
+            color: var(--text-primary);
+        }
+
+        /* Alertas / Advertencias Especiales */
+        .warning-box {
+            background-color: rgba(220, 38, 38, 0.1);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .warning-box-icon {
+            color: #ef4444;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .warning-box-content h4 {
+            color: #f87171;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .warning-box-content p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
+
+        /* Grid de permisos */
+        .permissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .permission-card {
+            background-color: rgba(25, 29, 36, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            transition: var(--transition-smooth);
+        }
+
+        .permission-card:hover {
+            border-color: var(--color-primary-light);
+            background-color: rgba(25, 29, 36, 0.8);
+        }
+
+        .permission-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .permission-badge {
+            background-color: rgba(41, 87, 163, 0.2);
+            color: var(--color-primary-light);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .permission-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .permission-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        /* Resaltador de búsqueda */
+        .highlight {
+            background-color: rgba(147, 107, 237, 0.4);
+            color: white;
+            padding: 0 2px;
+            border-radius: 2px;
+            font-weight: 600;
+        }
+
+        /* Buscador sin resultados */
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .no-results svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Contacto Form */
+        .contact-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 24px;
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #ffffff, var(--color-accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            text-align: left;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .contact-method-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(41, 87, 163, 0.1);
+            border: 1px solid rgba(41, 87, 163, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary-light);
+            flex-shrink: 0;
+        }
+
+        .contact-method-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        .contact-method-text h5 {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-method-text p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+
+
+        /* Botón Volver Arriba */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+            z-index: 99;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(147, 107, 237, 0.4);
+        }
+
+        .back-to-top svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #12161D;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: white;
+            stroke-width: 2.5;
+            fill: none;
+        }
+
+        .footer-logo-text {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent-light);
+        }
+
+
+
+        /* Media queries para responsividad */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .tab-btn {
+                padding: 10px 20px;
+                font-size: 0.85rem;
+            }
+
+            .policy-block {
+                padding: 20px;
+            }
+
+            .policy-block h2 {
+                font-size: 1.2rem;
+            }
+
+            .warning-box {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="progress-bar"></div>
+    <div class="bg-gradient-mesh"></div>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo-area">
+                <img src="img/logo.png" alt="LANcall Logo" style="height: 36px; width: auto; object-fit: contain;">
+                <div class="logo-text">LAN<span>call</span></div>
+            </a>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">
+                Versión 1.0 (Julio 2026)
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Centro de Privacidad y Términos</h1>
+        <p>En LANcall nos comprometemos a ofrecerte una comunicación fluida y segura en tus rutas de moto. Consulta
+            nuestras políticas y condiciones de servicio.</p>
+
+        <!-- Tabs -->
+        <div class="tabs-wrapper">
+            <div class="tabs-container">
+                <button class="tab-btn active" id="btn-privacy" onclick="switchTab('privacy')">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        style="margin-top:-2px">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    Política de Privacidad
+                </button>
+                <button class="tab-btn" id="btn-terms" onclick="switchTab('terms')">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        style="margin-top:-2px">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10 9 9 9 8 9" />
+                    </svg>
+                    Términos y Condiciones
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <div class="search-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </div>
+                <input type="text" id="search-input" class="search-input"
+                    placeholder="Buscar palabras clave (ej: micrófono, datos, seguridad)..." oninput="performSearch()">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="content-container">
+
+        <!-- TAB: PRIVACY POLICY -->
+        <div id="section-privacy" class="content-section active">
+
+            <div class="summary-card">
+                <h3>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        style="color:var(--color-accent)">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Resumen Rápido de Privacidad
+                </h3>
+                <ul>
+                    <li><strong>Audio Local:</strong> Tu voz se procesa en tiempo real para ser transmitida.
+                        <strong>Nunca</strong> se guarda, graba ni almacena en servidores externos.</li>
+                    <li><strong>Sin Cuentas Obligatorias:</strong> En el modo offline (Radio y QR), no necesitas
+                        registrarte ni proveer datos personales.</li>
+                    <li><strong>Seguridad de Datos:</strong> Las conexiones en red local son directas de dispositivo a
+                        dispositivo (P2P). No pasan por internet.</li>
+                    <li><strong>Identificador de la App:</strong> Esta política aplica al paquete de aplicación
+                        <code>com.regf12.lancall</code>.</li>
+                </ul>
+            </div>
+
+            <!-- Block 1: Identificación y Responsable -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    1. Identificación del Responsable
+                </h2>
+                <p>La presente Política de Privacidad describe el tratamiento de los datos personales de los usuarios
+                    por parte de la aplicación móvil <strong>LANcall</strong> (también identificada en el código fuente
+                    y repositorios como RyderVoice / VozRider), cuyo identificador de paquete en sistemas operativos
+                    Android es <strong><code>com.regf12.lancall</code></strong> (en adelante, "la Aplicación" o
+                    "nosotros").</p>
+                <p>Para resolver cualquier consulta en relación con el tratamiento de tus datos, puedes ponerte en
+                    contacto a través de nuestra dirección electrónica: <strong>soporte@lancall.com</strong>.</p>
+            </div>
+
+            <!-- Block 2: Permisos Requeridos y por qué -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    2. Permisos y Acceso al Dispositivo
+                </h2>
+                <p>Para que la Aplicación realice sus funciones principales de intercomunicación de voz sin cortes y
+                    conexión automática offline durante tus rutas en carretera, es estrictamente necesario otorgar los
+                    siguientes permisos en tu dispositivo móvil. Explicamos detalladamente la justificación de cada uno:
+                </p>
+
+                <div class="permissions-grid">
+                    <div class="permission-card">
+                        <div class="permission-header">
+                            <span class="permission-badge">Audio</span>
+                            <span class="permission-title">Micrófono</span>
+                        </div>
+                        <p class="permission-desc">Permite capturar tu voz en tiempo real. La Aplicación procesa el
+                            audio usando APIs de sistema como <code>AudioRecord</code>. La voz se transmite de inmediato
+                            a tus compañeros de ruta y <strong>no se almacena, graba ni sube a ningún servidor
+                                externo.</strong></p>
+                    </div>
+
+                    <div class="permission-card">
+                        <div class="permission-header">
+                            <span class="permission-badge">Cámara</span>
+                            <span class="permission-title">Cámara de Fotos</span>
+                        </div>
+                        <p class="permission-desc">Se requiere única y exclusivamente para escanear el código QR del
+                            Anfitrión de la llamada, permitiendo realizar el emparejamiento WebRTC directo P2P de forma
+                            rápida sin necesidad de buscar manualmente.</p>
+                    </div>
+
+                    <div class="permission-card">
+                        <div class="permission-header">
+                            <span class="permission-badge">Ubicación</span>
+                            <span class="permission-title">Ubicación Precisa</span>
+                        </div>
+                        <p class="permission-desc">Requerido por el sistema operativo Android para el descubrimiento de
+                            redes y dispositivos locales vía Wi-Fi Directo, Hotspot y ZeroConf/NSD (Network Service
+                            Discovery). La Aplicación <strong>no recopila, rastrea ni comparte tu ubicación
+                                geográfica.</strong></p>
+                    </div>
+
+                    <div class="permission-card">
+                        <div class="permission-header">
+                            <span class="permission-badge">Nativo</span>
+                            <span class="permission-title">Foreground Service</span>
+                        </div>
+                        <p class="permission-desc">Se ejecuta un servicio persistente en primer plano para asegurar que
+                            el socket UDP y la captura de micrófono sigan activos con la pantalla apagada o con la
+                            aplicación en segundo plano en rutas de larga duración.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Block 3: Recopilación de Datos -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    3. Datos Recopilados y Propósito
+                </h2>
+                <p>LANcall está diseñada para priorizar la privacidad del usuario. Los datos se manejan de la siguiente
+                    manera:</p>
+                <ul>
+                    <li><strong>Datos de Voz en Tiempo Real:</strong> Capturamos el flujo de audio del micrófono y lo
+                        fragmentamos para transmitirlo a través de la red (mediante paquetes UDP en el modo Radio o
+                        mediante canales WebRTC en los modos Online y QR). El flujo se reproduce directamente en el
+                        dispositivo receptor y se descarta de forma inmediata de la memoria RAM del teléfono.</li>
+                    <li><strong>Alias de Usuario:</strong> Al abrir la app, puedes configurar un alias (nombre
+                        ficticio). Este alias solo se transmite localmente mediante NSD para que tus compañeros te
+                        identifiquen visualmente en la lista de dispositivos cercanos. No se vincula a ninguna identidad
+                        real ni cuenta personal.</li>
+                    <li><strong>Dirección IP Local y Puertos:</strong> Utilizados únicamente para establecer los sockets
+                        UDP locales y las conexiones P2P. Estos datos no son recopilados por nosotros ni se guardan más
+                        allá de la duración de la llamada activa.</li>
+                </ul>
+            </div>
+
+            <!-- Block 4: Proveedores de Servicios de Terceros -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                        <polyline points="2 17 12 22 22 17" />
+                        <polyline points="2 12 12 17 22 12" />
+                    </svg>
+                    4. Proveedores y Enlaces de Terceros
+                </h2>
+                <p>La Aplicación puede hacer uso de tecnologías de terceros para su correcto funcionamiento:</p>
+                <ul>
+                    <li><strong>PeerJS:</strong> En el Modo Online (Internet), se utiliza una biblioteca de código
+                        abierto y servidores de señalización PeerJS en internet para permitir que dos dispositivos se
+                        encuentren y negocien una llamada WebRTC directa. Nosotros no controlamos la red de PeerJS, por
+                        lo que te sugerimos consultar su política de uso de datos.</li>
+                    <li><strong>Google Genkit / Inteligencia Artificial:</strong> Se integran funciones basadas en IA
+                        local o mediante API de Google GenAI para características asistidas de la app. Los datos
+                        procesados por la IA en ningún caso contienen tus flujos de conversación de intercomunicador ni
+                        audio de ruta.</li>
+                </ul>
+            </div>
+
+            <!-- Block 5: Tus Derechos -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
+                    </svg>
+                    5. Seguridad y Derechos del Usuario
+                </h2>
+                <p>Dado que LANcall **no recopila ni almacena información personal** en bases de datos centralizadas de
+                    nuestra propiedad, no poseemos datos de usuario que podamos modificar, exportar o eliminar a tu
+                    solicitud. Si utilizas el modo online, cualquier dato transitorio de red se rige por las conexiones
+                    directas.</p>
+                <p>Implementamos medidas de seguridad técnicas en los dispositivos, como la liberación inmediata de los
+                    buffers de memoria del micrófono y la configuración de canales cerrados en red local para prevenir
+                    interferencias. Sin embargo, recuerda que en conexiones Wi-Fi locales abiertas la seguridad depende
+                    del propio enrutador o hotspot que estés utilizando.</p>
+            </div>
+
+        </div>
+
+        <!-- TAB: TERMS OF SERVICE -->
+        <div id="section-terms" class="content-section">
+
+            <div class="summary-card">
+                <h3>
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        style="color:var(--color-accent)">
+                        <path
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    Uso Responsable en Carretera
+                </h3>
+                <ul>
+                    <li><strong>Seguridad Vial:</strong> Configura la app antes de iniciar tu marcha. Está prohibido
+                        interactuar con la pantalla del celular mientras conduces.</li>
+                    <li><strong>Manos Libres:</strong> Utiliza sistemas de intercomunicador de casco Bluetooth o
+                        auriculares integrados homologados para evitar distracciones.</li>
+                    <li><strong>Sin Garantía Absoluta:</strong> La app se provee "tal cual" y su correcto desempeño
+                        depende del estado de tu hardware y de la red local creada.</li>
+                </ul>
+            </div>
+
+            <!-- Block 1: Aceptación -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    1. Aceptación de los Términos
+                </h2>
+                <p>Al descargar, instalar o utilizar la aplicación móvil <strong>LANcall</strong> (de paquete
+                    <code>com.regf12.lancall</code>), estás manifestando que aceptas de manera incondicional estar
+                    sujeto a los presentes Términos y Condiciones de Uso. Si no estás de acuerdo con alguno de los
+                    puntos establecidos en este documento, debes suspender inmediatamente el uso de la Aplicación y
+                    desinstalarla de tu dispositivo.</p>
+            </div>
+
+            <!-- Block 2: Advertencia Crítica de Seguridad Vial -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    2. Advertencia Crítica de Seguridad Vial
+                </h2>
+                <div class="warning-box">
+                    <div class="warning-box-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <div class="warning-box-content">
+                        <h4>¡LEER CON ATENCIÓN ANTES DE ARRANCAR!</h4>
+                        <p>El uso de teléfonos móviles u otros dispositivos electrónicos de comunicación mientras se
+                            opera un vehículo motorizado constituye un riesgo severo de accidente de tránsito. La
+                            Aplicación se diseñó exclusivamente bajo la premisa de intercomunicador de <strong>manos
+                                libres</strong> continuas, para ser escuchado y hablar mediante micrófonos de casco y
+                            audífonos integrados.</p>
+                    </div>
+                </div>
+                <p>Al utilizar LANcall durante la conducción de una motocicleta u otro vehículo, te comprometes a:</p>
+                <ol>
+                    <li><strong>Configurar la sesión de intercomunicador (emparejamiento, QR o alias) antes de
+                            arrancar</strong> el motor o bien estando estacionado de forma segura fuera de la vía
+                        pública.</li>
+                    <li>Utilizar soportes homologados y estables para el celular, colocados de forma que no obstruyan tu
+                        campo de visión del tráfico ni del panel de la moto.</li>
+                    <li>Mantener una actitud atenta a la carretera en todo momento, reconociendo que escuchar
+                        conversaciones grupales puede mermar tu concentración auditiva.</li>
+                    <li>Cumplir estrictamente la legislación vigente en tu país o región respecto al uso de auriculares,
+                        bocinas de casco y dispositivos telefónicos sobre motocicletas.</li>
+                </ol>
+                <p>LANcall, sus desarrolladores, afiliados y distribuidores declinan expresamente cualquier tipo de
+                    responsabilidad civil o penal por accidentes, daños físicos, daños materiales, fallecimientos o
+                    multas de tránsito resultantes del manejo inadecuado, manipulación de pantalla o falta de atención
+                    debida al utilizar la aplicación.</p>
+            </div>
+
+            <!-- Block 3: Propiedad Intelectual -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                    3. Propiedad Intelectual y Licencia de Uso
+                </h2>
+                <p>La Aplicación y todo su contenido original, incluyendo su código fuente (integración web Next.js y
+                    código nativo Android), logotipos, interfaz gráfica de usuario, estilos visuales, paletas de colores
+                    y algoritmos de comunicación, son propiedad exclusiva de los creadores de LANcall.</p>
+                <p>Se te otorga una licencia limitada, no exclusiva, intransferible y revocable para descargar, instalar
+                    y utilizar la Aplicación en tus dispositivos personales, únicamente con fines recreativos de
+                    intercomunicación privada. Queda prohibida la ingeniería inversa, la redistribución no autorizada
+                    bajo otras marcas o la explotación comercial directa de la estructura tecnológica del sistema sin
+                    consentimiento escrito previo.</p>
+            </div>
+
+            <!-- Block 4: Limitación de Garantías -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    4. Exclusión de Garantías
+                </h2>
+                <p>La Aplicación se proporciona **"tal cual"** y **"según disponibilidad"**, sin garantías de ningún
+                    tipo, expresas o implícitas. Dado que el software ofrece tres métodos de intercomunicación
+                    dependientes del hardware (Wi-Fi, Bluetooth y hardware de red de tu dispositivo), no podemos
+                    asegurar que:</p>
+                <ul>
+                    <li>La comunicación sea 100% ininterrumpida o libre de ruido estático en todo momento de la ruta,
+                        dado que las ondas de radio y coberturas locales están sujetas a interferencias geográficas y
+                        climáticas.</li>
+                    <li>El consumo de batería se mantenga a niveles mínimos constantes, ya que la ejecución de sockets
+                        directos UDP y el funcionamiento del micrófono continuo en primer plano demandan un uso
+                        intensivo de energía.</li>
+                    <li>La calidad del audio sea siempre óptima, pues esto dependerá en gran medida de las
+                        especificaciones del micrófono físico de tu dispositivo y su cancelación de ruido ante el
+                        viento.</li>
+                </ul>
+            </div>
+
+            <!-- Block 5: Modificaciones -->
+            <div class="policy-block searchable">
+                <h2>
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    5. Modificaciones de los Términos
+                </h2>
+                <p>Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Cualquier
+                    cambio significativo se verá reflejado con la actualización de la fecha de revisión en la parte
+                    superior e inferior de esta página. Al continuar utilizando la Aplicación tras la entrada en vigor
+                    de los nuevos términos, confirmas tu conformidad con los mismos.</p>
+            </div>
+
+        </div>
+
+        <!-- Buscador sin resultados -->
+        <div id="no-results-message" class="no-results">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+            </svg>
+            <p>No se encontraron resultados para la búsqueda.</p>
+            <p style="font-size: 0.85rem; margin-top: 5px;">Intenta buscar otra palabra clave, como "micrófono", "P2P",
+                "GPS" o "moto".</p>
+        </div>
+
+    </main>
+
+    <!-- Contact Form & Info -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>¿Tienes alguna duda legal o técnica?</h3>
+                <p>Nuestro equipo de soporte y privacidad está disponible para ayudarte a esclarecer el funcionamiento
+                    técnico de los sockets de audio locales y la seguridad de la aplicación.</p>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <div class="contact-method-text">
+                        <h5>Correo de Soporte</h5>
+                        <p>soporte@lancall.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-method-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <div class="contact-method-text">
+                        <h5>Código de la App</h5>
+                        <p>Paquete Android: com.regf12.lancall</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-to-top-btn" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="LANcall Logo" style="height: 24px; width: auto; object-fit: contain; margin-right: 8px;">
+            <span class="footer-logo-text">LANcall</span>
+        </div>
+        <div class="footer-links">
+            <a href="#" onclick="switchTab('privacy')">Política de Privacidad</a>
+            <a href="#" onclick="switchTab('terms')">Términos y Condiciones</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <p>&copy; 2026 LANcall. Todos los derechos reservados. Desarrollado para la comunidad rider de intercomunicación
+            libre y segura.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-muted);">El uso de esta app está estrictamente
+            sujeto a las normas de tránsito locales. Conduce con prudencia.</p>
+    </footer>
+
+
+
+    <!-- Script de lógica interactiva -->
+    <script>
+        // Función para cambiar de pestaña entre Política de Privacidad y Términos
+        function switchTab(tabName) {
+            const secPrivacy = document.getElementById('section-privacy');
+            const secTerms = document.getElementById('section-terms');
+            const btnPrivacy = document.getElementById('btn-privacy');
+            const btnTerms = document.getElementById('btn-terms');
+            const searchInput = document.getElementById('search-input');
+
+            // Resetear búsqueda antes de cambiar
+            searchInput.value = '';
+            clearHighlight();
+
+            if (tabName === 'privacy') {
+                secPrivacy.classList.add('active');
+                secTerms.classList.remove('active');
+                btnPrivacy.classList.add('active');
+                btnTerms.classList.remove('active');
+            } else {
+                secPrivacy.classList.remove('active');
+                secTerms.classList.add('active');
+                btnPrivacy.classList.remove('active');
+                btnTerms.classList.add('active');
+            }
+
+            // Volver arriba de forma instantánea tras cambiar
+            window.scrollTo({ top: 0, behavior: 'instant' });
+
+            // Re-ejecutar búsqueda vacía para restablecer vistas
+            performSearch();
+        }
+
+        // Animación de Header en Scroll y actualización de barra de lectura
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const backToTopBtn = document.getElementById('back-to-top-btn');
+            const progressBar = document.getElementById('progress-bar');
+
+            // Header estilo compacto en scroll
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Mostrar/ocultar botón flotante volver arriba
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+
+            // Calcular porcentaje de lectura de la página
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (totalHeight > 0) {
+                const progress = (window.scrollY / totalHeight) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
+        });
+
+        // Función para subir con suavidad
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+
+
+        // Buscador interactivo inteligente (Busca dentro del texto y resalta los resultados)
+        function performSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const activeSection = document.querySelector('.content-section.active');
+            const blocks = activeSection.querySelectorAll('.searchable');
+            const noResultsMsg = document.getElementById('no-results-message');
+
+            let matchCount = 0;
+
+            clearHighlight();
+
+            if (query === '') {
+                // Si la búsqueda está vacía, mostramos todo y ocultamos mensaje de no resultados
+                blocks.forEach(block => {
+                    block.style.display = 'block';
+                });
+                noResultsMsg.style.display = 'none';
+                return;
+            }
+
+            blocks.forEach(block => {
+                const text = block.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    block.style.display = 'block';
+                    matchCount++;
+
+                    // Resaltar términos encontrados (de forma elemental sin romper la estructura HTML interna)
+                    highlightText(block, query);
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+
+            if (matchCount === 0) {
+                noResultsMsg.style.display = 'block';
+            } else {
+                noResultsMsg.style.display = 'none';
+            }
+        }
+
+        // Función auxiliar para limpiar los resaltados previos
+        function clearHighlight() {
+            const highlightedElements = document.querySelectorAll('.highlight');
+            highlightedElements.forEach(el => {
+                const parent = el.parentNode;
+                parent.replaceChild(document.createTextNode(el.textContent), el);
+                parent.normalize(); // Fusiona nodos de texto contiguos
+            });
+        }
+
+        // Resaltar el texto de forma interactiva en los bloques de texto
+        function highlightText(element, query) {
+            const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+            const textNodes = [];
+
+            let node;
+            while (node = walker.nextNode()) {
+                // Solo nos interesan los nodos de texto que no estén dentro de otros elementos interactivos especiales
+                if (node.parentNode.nodeName !== 'SCRIPT' && node.parentNode.nodeName !== 'STYLE') {
+                    textNodes.push(node);
+                }
+            }
+
+            textNodes.forEach(node => {
+                const textContent = node.nodeValue;
+                const lowerText = textContent.toLowerCase();
+                const index = lowerText.indexOf(query);
+
+                if (index !== -1) {
+                    const span = document.createElement('span');
+                    span.className = 'highlight';
+
+                    const matchedText = textContent.substring(index, index + query.length);
+                    const beforeText = textContent.substring(0, index);
+                    const afterText = textContent.substring(index + query.length);
+
+                    span.textContent = matchedText;
+
+                    // Creamos fragmento para reemplazar el nodo de texto
+                    const fragment = document.createDocumentFragment();
+                    if (beforeText) fragment.appendChild(document.createTextNode(beforeText));
+                    fragment.appendChild(span);
+                    if (afterText) fragment.appendChild(document.createTextNode(afterText));
+
+                    node.parentNode.replaceChild(fragment, node);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
