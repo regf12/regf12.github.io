@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Gastos - Escáner de Facturas e Inteligencia Artificial</title>
+    <meta name="description" content="Toma una foto a tus facturas y la IA extraerá automáticamente el comercio, la fecha, los ítems y montos. Administra tus finanzas personales de forma inteligente.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-dark: #0D131F;
+            --bg-card: #151D2A;
+            --bg-card-border: rgba(255, 255, 255, 0.08);
+            --primary: #0284C7;
+            --primary-light: #38BDF8;
+            --primary-glow: rgba(56, 189, 248, 0.25);
+            --accent: #F97316;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glows */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            pointer-events: none;
+        }
+        .glow-1 {
+            top: -10%;
+            left: 20%;
+            width: 500px;
+            height: 500px;
+            background: rgba(2, 132, 199, 0.2);
+        }
+        .glow-2 {
+            top: 40%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: rgba(56, 189, 248, 0.12);
+        }
+        .glow-3 {
+            bottom: 10%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(249, 115, 22, 0.1);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(13, 19, 31, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--bg-card-border);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+            color: #fff;
+            box-shadow: 0 4px 20px var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid var(--bg-card-border);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 30px;
+            color: var(--primary-light);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 36px;
+            max-width: 500px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        /* Mockup Mobile UI Showcase */
+        .mockup-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-frame {
+            width: 320px;
+            height: 640px;
+            background: #0B1019;
+            border-radius: 44px;
+            border: 10px solid #1E293B;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 40px rgba(2, 132, 199, 0.2);
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phone-header {
+            padding: 20px 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phone-title-sm {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .phone-title-lg {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        .phone-body {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            overflow-y: auto;
+        }
+
+        .scanner-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 20px;
+            padding: 24px 16px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scanner-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56,189,248,0.2) 0%, rgba(2,132,199,0.05) 100%);
+            border: 1px dashed var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            color: var(--primary-light);
+        }
+
+        .scanner-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .scanner-card p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .phone-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .phone-btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .phone-btn-secondary {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--primary-light);
+        }
+
+        /* Stats Mockup Card */
+        .stat-card-mini {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 18px;
+            padding: 16px;
+        }
+
+        .stat-val {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--primary-light);
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            height: 60px;
+            margin-top: 12px;
+            padding-top: 10px;
+        }
+
+        .bar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        .bar.active {
+            background: var(--primary-light);
+        }
+        .bar.highlight {
+            background: var(--accent);
+        }
+
+        .phone-nav-bar {
+            height: 60px;
+            background: #111723;
+            border-top: 1px solid var(--bg-card-border);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .phone-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+        }
+
+        .phone-nav-item.active {
+            color: var(--primary-light);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            border-top: 1px solid var(--bg-card-border);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Benefits / How it works */
+        .how-it-works {
+            padding: 80px 0;
+            background: rgba(21, 29, 42, 0.5);
+            border-radius: 32px;
+            margin-bottom: 10px;
+            border: 1px solid var(--bg-card-border);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+            padding: 0 40px;
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .step-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .step-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--bg-card-border);
+            padding: 60px 0 40px;
+            background: #090D15;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero p {
+                margin: 0 auto 36px;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .features-grid, .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps-grid {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="brand">
+                <div class="brand-icon">
+                    <i data-lucide="receipt"></i>
+                </div>
+                <span>Control de Gastos</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#como-funciona">Cómo Funciona</a></li>
+                    <li><a href="privacy-policy.html">Privacidad</a></li>
+                    <li><a href="terms-and-conditions.html">Términos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <div class="badge">
+                    <i data-lucide="sparkles" size="16"></i> Potenciado con Inteligencia Artificial
+                </div>
+                <h1>Escanea tus facturas y <span>optimiza tu presupuesto</span></h1>
+                <p>Olvídate del registro manual de gastos. Toma una foto a tu recibo o factura y nuestra IA extraerá instantáneamente los ítems, el comercio y los montos totales.</p>
+                <div class="hero-actions">
+                    <a href="#caracteristicas" class="btn btn-primary">
+                        <i data-lucide="scan-line"></i> Descubrir la App
+                    </a>
+                    <a href="privacy-policy.html" class="btn btn-outline">
+                        <i data-lucide="shield-check"></i> Políticas de Privacidad
+                    </a>
+                </div>
+            </div>
+
+            <!-- Phone Interactive Display Mockup -->
+            <div class="mockup-container">
+                <div class="phone-frame">
+                    <div class="phone-header">
+                        <div>
+                            <div class="phone-title-sm">CONTROL DE GASTOS</div>
+                            <div class="phone-title-lg">Escáner IA</div>
+                        </div>
+                        <i data-lucide="settings" size="20" style="color: var(--text-muted);"></i>
+                    </div>
+                    <div class="phone-body">
+                        <div class="scanner-card">
+                            <div class="scanner-circle">
+                                <i data-lucide="scan" size="32"></i>
+                            </div>
+                            <h4>Escanear Factura o Recibo</h4>
+                            <p>Toma una foto o adjunta una imagen. La IA extraerá automáticamente el comercio, la fecha, el monto total y los ítems.</p>
+                            <div class="phone-btn phone-btn-primary">
+                                <i data-lucide="camera" size="18"></i> Tomar Foto de Factura
+                            </div>
+                            <div class="phone-btn phone-btn-secondary">
+                                <i data-lucide="image" size="18"></i> Adjuntar desde Galería
+                            </div>
+                        </div>
+
+                        <div class="stat-card-mini">
+                            <div style="font-size: 0.75rem; color: var(--text-muted);">Gasto General Acumulado</div>
+                            <div class="stat-val">$36.25</div>
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 15%;"></div>
+                                <div class="bar" style="height: 15%;"></div>
+                                <div class="bar" style="height: 15%;"></div>
+                                <div class="bar" style="height: 15%;"></div>
+                                <div class="bar active" style="height: 90%;"></div>
+                                <div class="bar active" style="height: 85%;"></div>
+                                <div class="bar highlight" style="height: 25%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-nav-bar">
+                        <div class="phone-nav-item active">
+                            <i data-lucide="camera" size="18"></i>
+                            <span>Escanear</span>
+                        </div>
+                        <div class="phone-nav-item">
+                            <i data-lucide="receipt" size="18"></i>
+                            <span>Movimientos</span>
+                        </div>
+                        <div class="phone-nav-item">
+                            <i data-lucide="bar-chart-3" size="18"></i>
+                            <span>Estadísticas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="caracteristicas" class="features">
+            <div class="section-header">
+                <h2>Diseñado para Simplificar tus Finanzas</h2>
+                <p>Nuestra aplicación combina reconocimiento inteligente con herramientas analíticas claras para llevar el control exacto de lo que gastas.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="cpu" size="28"></i>
+                    </div>
+                    <h3>OCR e IA Avanzada</h3>
+                    <p>Reconocimiento óptico de caracteres impulsado por inteligencia artificial para extraer comercio, desglose de ítems, impuestos y totales de cualquier tipo de recibo.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="bar-chart-2" size="28"></i>
+                    </div>
+                    <h3>Estadísticas Claras</h3>
+                    <p>Visualiza tus consumos por día, semana o comparativas mensuales. Detecta en qué categorías estás gastando más y optimiza tus presupuestos.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i data-lucide="list-checks" size="28"></i>
+                    </div>
+                    <h3>Desglose de Ítems Únicos</h3>
+                    <p>No solo registramos el total general; guardamos el detalle completo de productos adquiridos para un historial exacto de compras.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="como-funciona" class="how-it-works">
+            <div class="section-header">
+                <h2>¿Cómo Funciona?</h2>
+                <p>En solo 3 pasos tendrás tus facturas digitales y clasificadas sin esfuerzo manual.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Captura o Adjunta</h4>
+                    <p>Haz una foto rápida al ticket o selecciona la imagen guardada en tu galería.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Procesamiento IA</h4>
+                    <p>El sistema analiza el recibo, identificando importes, fecha y tienda automáticamente.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Guarda y Analiza</h4>
+                    <p>Confirma los datos extraídos y consulta tus métricas y comparativas en tiempo real.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="brand">
+                    <div class="brand-icon">
+                        <i data-lucide="receipt"></i>
+                    </div>
+                    <span>Control de Gastos</span>
+                </a>
+                <div class="footer-links">
+                    <a href="#caracteristicas">Características</a>
+                    <a href="#como-funciona">Cómo Funciona</a>
+                    <a href="privacy-policy.html">Política de Privacidad</a>
+                    <a href="terms-and-conditions.html">Términos y Condiciones</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Control de Gastos. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

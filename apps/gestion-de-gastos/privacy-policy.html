@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Control de Gastos</title>
+    <meta name="description" content="Política de Privacidad y Protección de Datos Personales para la aplicación Control de Gastos.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-dark: #0D131F;
+            --bg-card: #151D2A;
+            --bg-card-border: rgba(255, 255, 255, 0.08);
+            --primary: #0284C7;
+            --primary-light: #38BDF8;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(13, 19, 31, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--bg-card-border);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .back-link {
+            color: var(--primary-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .policy-body {
+            padding: 60px 0;
+        }
+
+        .policy-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--bg-card-border);
+            padding-bottom: 24px;
+        }
+
+        .policy-header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .policy-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .content-card h2 {
+            font-size: 1.4rem;
+            color: var(--primary-light);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-card p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .content-card ul {
+            color: var(--text-muted);
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .content-card li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            border-top: 1px solid var(--bg-card-border);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">
+                    <i data-lucide="receipt"></i>
+                </div>
+                <span>Control de Gastos</span>
+            </a>
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left" size="18"></i> Volver a la Principal
+            </a>
+        </div>
+    </header>
+
+    <main class="container policy-body">
+        <div class="policy-header">
+            <h1>Política de Privacidad</h1>
+            <p>Última actualización: 3 de Agosto de 2026</p>
+        </div>
+
+        <div class="content-card">
+            <h2><i data-lucide="shield" size="22"></i> 1. Información que Recopilamos</h2>
+            <p>En <strong>Control de Gastos</strong> nos tomamos muy en serio la privacidad de tus datos financieros y personales. La aplicación está diseñada para minimizar la recolección de información sensible.</p>
+            <ul>
+                <li><strong>Imágenes de Facturas y Recibos:</strong> Las fotografías o capturas subidas para procesamiento de IA se utilizan exclusivamente para la extracción de texto (OCR) y datos de compra (monto, fecha, ítems).</li>
+                <li><strong>Datos de Uso:</strong> Información anónima sobre el rendimiento de la app y reporte de errores para mejorar continuamente la experiencia de usuario.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2><i data-lucide="cpu" size="22"></i> 2. Uso de la Inteligencia Artificial</h2>
+            <p>Utilizamos modelos de Inteligencia Artificial seguros para analizar el contenido visual de tus facturas. Este procesamiento garantiza que:</p>
+            <ul>
+                <li>Las imágenes no sean utilizadas para entrenar modelos públicos sin tu consentimiento.</li>
+                <li>Los datos extraídos pertenezcan de manera exclusiva a tu historial y cuenta dentro de la aplicación.</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2><i data-lucide="lock" size="22"></i> 3. Seguridad de los Datos</h2>
+            <p>Implementamos estándares de seguridad avanzados para la transmisión y almacenamiento de la información. Todas las comunicaciones con nuestros servidores y servicios de procesamiento IA están protegidas mediante cifrado de punto a punto (HTTPS/TLS).</p>
+        </div>
+
+        <div class="content-card">
+            <h2><i data-lucide="user-check" size="22"></i> 4. Derechos del Usuario</h2>
+            <p>Tienes derecho a acceder, corregir o eliminar los datos de tu historial de gastos en cualquier momento directamente desde la app. Si deseas eliminar tu cuenta e información de nuestros registros, puedes solicitarlo mediante la sección de soporte.</p>
+        </div>
+
+        <div class="content-card">
+            <h2><i data-lucide="mail" size="22"></i> 5. Contacto</h2>
+            <p>Si tienes preguntas o inquietudes respecto a nuestra Política de Privacidad, puedes ponerte en contacto con nuestro equipo a través de los canales oficiales de soporte.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Control de Gastos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

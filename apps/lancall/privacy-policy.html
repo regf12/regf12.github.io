@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - LANcall</title>
+    <meta name="description"
+        content="Política de Privacidad y protección de datos para la aplicación LANcall, el intercomunicador de voz libre para motociclistas.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --bg-primary: #191D24;
+            --bg-secondary: #202632;
+            --color-primary: #2957A3;
+            --color-primary-light: #3b71ca;
+            --color-accent: #936BED;
+            --color-accent-light: #b091f4;
+            --text-primary: #F3F4F6;
+            --text-secondary: #9CA3AF;
+            --text-muted: #6B7280;
+            --border-color: #2D3748;
+            --card-bg: rgba(32, 38, 50, 0.7);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg-gradient-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(41, 87, 163, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(147, 107, 237, 0.1) 0%, transparent 45%),
+                var(--bg-primary);
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(25, 29, 36, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-text {
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #ffffff, var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-text span {
+            color: var(--color-accent);
+            -webkit-text-fill-color: initial;
+        }
+
+        .back-link {
+            color: var(--color-accent-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: white;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 40px auto 60px auto;
+            padding: 0 24px;
+            flex-grow: 1;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff 30%, var(--color-accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, rgba(41, 87, 163, 0.15), rgba(147, 107, 237, 0.05));
+            border: 1px solid rgba(147, 107, 237, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .summary-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .summary-card ul {
+            list-style-type: none;
+        }
+
+        .summary-card li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .summary-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .policy-block {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(8px);
+        }
+
+        .policy-block h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 10px;
+        }
+
+        .policy-block p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+        }
+
+        .policy-block ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .policy-block li {
+            margin-bottom: 8px;
+        }
+
+        .permissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .permission-card {
+            background-color: rgba(25, 29, 36, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .permission-badge {
+            background-color: rgba(41, 87, 163, 0.2);
+            color: var(--color-primary-light);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-right: 6px;
+        }
+
+        .permission-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .permission-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        footer {
+            background-color: #12161D;
+            border-top: 1px solid var(--border-color);
+            padding: 30px 24px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-gradient-mesh"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="img/logo.png" alt="LANcall Logo" style="height: 36px; width: auto; object-fit: contain;">
+                <div class="logo-text">LAN<span>call</span></div>
+            </a>
+            <a href="index.html" class="back-link">
+                <i data-lucide="arrow-left" size="18"></i> Volver a la Principal
+            </a>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="page-header">
+            <h1>Política de Privacidad</h1>
+            <p style="color: var(--text-muted);">Versión 1.0 (Julio 2026)</p>
+        </div>
+
+        <div class="summary-card">
+            <h3><i data-lucide="check-circle-2" style="color:var(--color-accent)"></i> Resumen Rápido de Privacidad</h3>
+            <ul>
+                <li><strong>Audio Local:</strong> Tu voz se procesa en tiempo real para ser transmitida. <strong>Nunca</strong> se guarda, graba ni almacena en servidores externos.</li>
+                <li><strong>Sin Cuentas Obligatorias:</strong> En el modo offline (Radio y QR), no necesitas registrarte ni proveer datos personales.</li>
+                <li><strong>Seguridad de Datos:</strong> Las conexiones en red local son directas de dispositivo a dispositivo (P2P). No pasan por internet.</li>
+                <li><strong>Identificador de la App:</strong> Esta política aplica al paquete de aplicación <code>com.regf12.lancall</code>.</li>
+            </ul>
+        </div>
+
+        <div class="policy-block">
+            <h2><i data-lucide="user" size="20"></i> 1. Identificación del Responsable</h2>
+            <p>La presente Política de Privacidad describe el tratamiento de los datos personales de los usuarios por parte de la aplicación móvil <strong>LANcall</strong> (identificador de paquete <strong><code>com.regf12.lancall</code></strong>).</p>
+            <p>Para resolver cualquier consulta en relación con el tratamiento de tus datos, puedes ponerte en contacto a través de nuestra dirección electrónica: <strong>soporte@lancall.com</strong>.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i data-lucide="key" size="20"></i> 2. Permisos y Acceso al Dispositivo</h2>
+            <p>Para que la Aplicación realice sus funciones principales de intercomunicación de voz sin cortes, es necesario otorgar los siguientes permisos:</p>
+
+            <div class="permissions-grid">
+                <div class="permission-card">
+                    <span class="permission-badge">Audio</span>
+                    <span class="permission-title">Micrófono</span>
+                    <p class="permission-desc">Permite capturar tu voz en tiempo real. La voz se transmite de inmediato y no se almacena ni graba.</p>
+                </div>
+                <div class="permission-card">
+                    <span class="permission-badge">Cámara</span>
+                    <span class="permission-title">Cámara de Fotos</span>
+                    <p class="permission-desc">Requerido únicamente para escanear el código QR del Anfitrión para emparejamiento rápido P2P.</p>
+                </div>
+                <div class="permission-card">
+                    <span class="permission-badge">Ubicación</span>
+                    <span class="permission-title">Ubicación Precisa</span>
+                    <p class="permission-desc">Requerido por Android para descubrimiento de redes locales Wi-Fi Directo / ZeroConf. No rastreamos tu ubicación.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="policy-block">
+            <h2><i data-lucide="shield" size="20"></i> 3. Datos Recopilados y Propósito</h2>
+            <p>LANcall está diseñada para priorizar la privacidad del usuario. El flujo de audio se transmite por paquetes de red en tiempo real y se descarta de inmediato de la memoria RAM del dispositivo receptor.</p>
+        </div>
+
+        <div class="policy-block">
+            <h2><i data-lucide="lock" size="20"></i> 4. Seguridad y Derechos del Usuario</h2>
+            <p>Dado que LANcall no recopila ni almacena información personal en servidores centralizados, no poseemos datos que podamos modificar o exportar. Tienes el control total en tu dispositivo.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LANcall. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
